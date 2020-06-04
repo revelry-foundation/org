@@ -39,10 +39,10 @@
         --font-weight-semi-bold: 600;
         --font-weight-normal: 400;
         --font-weight-light: 300;
-        --color-primary: #111111;
+        --color-primary: #2A2A2A;
         --color-secondary: rgb(5, 5, 5);
-        --color-divider: #DDD;
-        --color-text: #393939;
+        --color-divider: #E0E0E0;
+        --color-text: #2A2A2A;
         --color-text-light: #AAA;
       }
       body {
@@ -71,7 +71,18 @@
         height: 1px;
         margin-bottom: 30px;
       }
-      
+      /* NAVBAR */
+      .navbar-brand {
+        height: 3.2rem;
+      }
+      .navbar-brand img {
+        height: 100%;
+        width: auto;
+      }
+      /* HERO */
+      .hero {
+        margin-top: -2.4rem;
+      }
       /* PAGEHEADER */
       .PageHeader {
         align-items: center;
@@ -112,7 +123,8 @@
       }
 
       /* FOOTER   */
-      #footer { 
+      #footer {
+        background: var(--color-text); 
         color: var(--color-text-light);
         font-size: 12px;
         padding: 40px 0;
@@ -127,6 +139,9 @@
       #about-revelry { 
         font-weight: var(--font-weight-semi-bold);
         text-align: center; 
+      }
+      footer a {
+        color: #FFF;
       }
       .about-revelry-content {
         margin: 20px auto 0;
@@ -148,57 +163,62 @@
     </style> 
   </head> 
   <body class="text-center">
-	  <div class="container">
-  
-      <div class="row PageHeader">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="revelry-foundation.png" alt="Revelry Foundation" />
+      </a>
+    </nav>
+    <section class="hero">
+      <img src="building-things-that-matter.jpg" class="img-fluid" alt="Building Things That Matter" />
+    </section>
+    <section class="container">
+      <div class="row">
         <div class="col-sm-12">
-          <h1>Revelry Foundation</h1>
+          <h2>Initiatives</h2>
+        </div>
+        <div class="col-sm-4">
+          <h3>Nightingale Initiative</h3>
+          <p>We’re working with state health officials and local community leaders across Louisiana to help flatten the curve.</p>
+          <p><a href="https://nightingale.revelry.org" class="btn btn-primary">Learn More</a></p>
+        </div>            
+        <div class="col-sm-4">
+          <h3>The Gardere Initiative</h3>
+          <p>We’re partnering with the Gardere Initiative to offer high school students the opportunity to gain essential technology skills and experience.</p>
+          <p><a href="https://3ulsmb4eg8vz37c0vz2si64j-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/apprentice-program.pdf" class="btn btn-primary">Learn More</a></p>
+        </div>            
+        <div class="col-sm-4">
+          <h3>The Revelry Apprenticeship Initiative</h3>
+          <p>We’re working to empower the next generation of future developers, designers, and project managers.</p>
+          <p><a href="https://github.com/revelrylabs" class="btn btn-primary">Learn More</a></p>
         </div>
       </div>
-
-      <div class="row MainContent">
-        <div class="col-sm-12"> 
-          <h2>Building Things That Matter</h2>
-          <p>The Revelry Foundation works with non-profit and community leaders to help build things that matter.</p>
-        </div>    
-        <div class="col-sm-12"> 
-            <div class="row">
-                <div class="col-sm-4">
-                    <h4>Nightingale</h4>
-                    <p>Building tools to help flatten the curve here in Louisiana in collaboration with community leaders.</p>
-                    <p><a href="https://nightingale.revelry.org" class="btn btn-primary">Learn More</a></p>
-                </div>            
-                <div class="col-sm-4">
-                    <h4>Apprenticeship</h4>
-                    <p>Training the next future workforce of developers, designers and project managers.</p>
-                    <p><a href="https://3ulsmb4eg8vz37c0vz2si64j-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/apprentice-program.pdf" class="btn btn-primary">Learn More</a></p>
-                </div>            
-                <div class="col-sm-4">
-                    <h4>Open Source</h4>
-                    <p>Our commitment to the community to give back and continue to foster open innovation.</p>
-                    <p><a href="https://github.com/revelrylabs" class="btn btn-primary">Learn More</a></p>
-                </div>
-            </div>                       
-        </div>
-
-      </div>
-      <div class="row" id="footer">
+    </section>
+    <section class="container">
+      <div class="row">
         <div class="col-sm-12">
-          <hr/>
+          <h2>Building in The Open Source</h2>
+          <p>We believe that Open Collaboration, Open Data, and Open Source is the path to accelerate innovation.</p>
+          <p><a href="https://github.com/revelrylabs" class="btn btn-primary">Learn More</a></p>
         </div>
-        <div class="col-sm-12 col-md-6" id="bff-overview">
-          <p><img src="" alt="" id="footer-logo"></p>
-          <h5>How can I get involved?</h5>
-          <p>Checkout the projects in our <a href="https://github.com/revelry-foundation/">Foundation GitHub Repo</a>.<br/>
-          Join our <a href="https://community.revelry.co/">slack community.</a></p>
-        </div>
-        <div class="col-sm-12 col-md-6" id="about-revelry">
-          <div class="about-revelry-content">
-            <p><img src="rev_bw.png" alt="Revelry logo" id="footer-rev-logo"></p>
-            <p>Revelry.org is proudly supported by <a href="https://revelry.co">Revelry Labs</a>.</p>
+      </div> 
+    </section>
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6" id="bff-overview">
+            <p><img src="" alt="" id="footer-logo"></p>
+            <h5>How can I get involved?</h5>
+            <p>Checkout the projects in our <a href="https://github.com/revelry-foundation/">Foundation GitHub Repo</a>.<br/>
+            Join our <a href="https://community.revelry.co/">Slack community.</a></p>
+          </div>
+          <div class="col-sm-12 col-md-6" id="about-revelry">
+            <div class="about-revelry-content">
+              <p><img src="rev_bw.png" alt="Revelry logo" id="footer-rev-logo"></p>
+              <p>Revelry.org is proudly supported by <a href="https://revelry.co">Revelry Labs</a>.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>                      
   </body> 
 </html>

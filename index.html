@@ -59,7 +59,7 @@
         color: var(--color-secondary);
       }
       h1 {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
         font-weight: var(--font-weight-bold);
       }
       @media only screen and (min-width: 1200px) {
@@ -68,7 +68,7 @@
         }
       }
       h2 { 
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: var(--font-weight-bold);
         padding: 20px 0 10px;
       }
@@ -78,7 +78,7 @@
         }
       }
       h3 {
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: var(--font-weight-bold);
       }
       @media only screen and (min-width: 1200px) {
@@ -102,6 +102,10 @@
         height: 1px;
         margin-bottom: 30px;
       }
+      /* BACKGROUND COLORS */
+      .bkgd-lightest-gray {
+        background: var(--color-lightest-gray);
+      }
       /* NAVBAR */
       .navbar-brand {
         height: 3.2rem;
@@ -112,16 +116,31 @@
         height: 100%;
         width: auto;
       }
-      /* HERO */
-      .hero {
-        margin-top: -2.4rem;
+      /* CONTAINER  */
+      .container {
+        max-width: 100%;
+        padding: 0 calc(var(--padding-base) * 2);
+      }
+      @media only screen and (min-width: 1200px) {
+        .container {
+          max-width: 1200px;
+        }
       }
       /* SECTIONS */
       section {
         padding: calc(var(--padding-base) * 4) 0;
       }
-      .bkgd-lightest-gray {
-        background: var(--color-lightest-gray);
+      /* EQUAL HEIGHT COLS */
+      .equal-height-cols {
+        align-items: stretch;
+      }
+      .equal-height-cols .col-sm-12 {
+        margin-bottom: var(--padding-base);
+      }
+      .equal-height-cols .card {
+        height: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
       /* BUTTONS */
       .btn {
@@ -135,8 +154,21 @@
       .card {
         border: 2px solid var(--color-text);
         padding: calc(var(--padding-base) * 2);
+        margin-bottom: var(--padding-base);
       }
-
+      /* HERO */
+      .hero {
+        margin-top: -2.4rem;
+        padding-bottom: calc(var(--padding-base) * 2);
+      }
+      .hero-img {
+        margin-bottom: var(--padding-base);
+      }
+      @media only screen and (min-width: 992px) {
+        .hero-img {
+          margin-bottom: 0;
+        }
+      }
       /* FOOTER   */
       #footer {
         background: var(--color-text); 
@@ -189,9 +221,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm-12 col-lg-8 px-lg-0 order-lg-12">
-            <img src="building-things-that-matter.jpg" class="img-fluid" alt="Building Things That Matter" />
+            <img src="building-things-that-matter.jpg" class="hero-img img-fluid" alt="Building Things That Matter" />
           </div>
-          <div class="col-sm-12 col-lg-4 px-lg-0 order-lg-1 hero-content">
+          <div class="col-sm-12 col-lg-4 order-lg-1 hero-content">
             <h1>Building Things that Matter</h1>
             <p class="large">We are designers and technologists working together with non-profit and community leaders to build a better future.</p>
           </div>
@@ -199,11 +231,8 @@
       </div>
     </section>
     <section class="container">
-      <div class="row">
-        <!-- <div class="col-sm-12">
-          <h2>Initiatives</h2>
-        </div> -->
-        <div class="col-md-4">
+      <div class="row equal-height-cols">
+        <div class="col-sm-12 col-md-4">
           <div class="card">
             <div class="row">
               <div class="col-sm-12">
@@ -214,7 +243,7 @@
             </div>
           </div>
         </div>            
-        <div class="col-md-4">
+        <div class="col-sm-12 col-md-4">
           <div class="card">
             <div class="row">
               <div class="col-sm-12">
@@ -225,7 +254,7 @@
             </div>
           </div>
         </div>           
-        <div class="col-md-4">
+        <div class="col-sm-12 col-md-4">
           <div class="card">
             <div class="row">
               <div class="col-sm-12">

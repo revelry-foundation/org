@@ -39,11 +39,16 @@
         --font-weight-semi-bold: 600;
         --font-weight-normal: 400;
         --font-weight-light: 300;
-        --color-primary: #2A2A2A;
+
+        --color-primary: #FFC862;
         --color-secondary: rgb(5, 5, 5);
         --color-divider: #E0E0E0;
-        --color-text: #2A2A2A;
-        --color-text-light: #AAA;
+        --color-lightest-gray: #F4F4F4;
+
+        --color-text: #323232;
+        --color-text-light: #ABABAB;
+
+        --padding-base: 15px;
       }
       body {
         color: var(--color-text);
@@ -53,8 +58,16 @@
       a {
         color: var(--color-secondary);
       }
+      h1 {
+        font-size: 2.8rem;
+        font-weight: var(--font-weight-bold);
+      }
+      @media only screen and (min-width: 1200px) {
+        h1 {
+          font-size: 3.2rem;
+        }
+      }
       h2 { 
-        color: var(--color-primary);
         font-size: 2.2rem;
         font-weight: var(--font-weight-bold);
         padding: 20px 0 10px;
@@ -63,6 +76,24 @@
         h2 {
           font-size: 2.6rem;
         }
+      }
+      h3 {
+        font-size: 2rem;
+        font-weight: var(--font-weight-bold);
+      }
+      @media only screen and (min-width: 1200px) {
+        h3 {
+          font-size: 2.2rem;
+          margin-bottom: 1.6rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.6rem;
+      }
+      .large {
+        font-size: 1.4rem;
+        margin-bottom: 1.8rem;
       }
       hr {
         background: var(--color-divider);
@@ -74,6 +105,8 @@
       /* NAVBAR */
       .navbar-brand {
         height: 3.2rem;
+        padding-left: 0;
+        margin-left: -1.4rem;
       }
       .navbar-brand img {
         height: 100%;
@@ -83,43 +116,25 @@
       .hero {
         margin-top: -2.4rem;
       }
-      /* PAGEHEADER */
-      .PageHeader {
-        align-items: center;
-        margin-bottom: 20px;
-        padding-top: 20px;
+      /* SECTIONS */
+      section {
+        padding: calc(var(--padding-base) * 4) 0;
       }
-      @media only screen and (min-width: 992px) {
-        .PageHeader {
-          margin-bottom: 40px;
-          padding-top: 40px;
-        }
+      .bkgd-lightest-gray {
+        background: var(--color-lightest-gray);
       }
-      #logo {
-        max-width: 283px;
+      /* BUTTONS */
+      .btn {
+        background: var(--color-primary);
+        color: var(--color-text);
+        font-size: 1rem;
+        font-weight: var(--font-weight-semi-bold);
+        padding: calc(var(--padding-base) * 0.5) calc(var(--padding-base) * 2);
       }
-      
-      @media only screen and (min-width: 768px) {
-        audio {
-          float: right;
-          width: 20rem;
-        }
-      }
-      @media only screen and (min-width: 1200px) {
-        #instructions {
-        margin: 0 20px 0 0;
-      }
-        audio {
-          width: 25rem;
-        }
-      }
-      
-
-      /* PAGE CONTENT */
-      @media only screen and (max-width: 768px) {
-        .MainContent {
-          flex-direction: column-reverse;
-        }
+      /* CARDS */
+      .card {
+        border: 2px solid var(--color-text);
+        padding: calc(var(--padding-base) * 2);
       }
 
       /* FOOTER   */
@@ -162,45 +177,77 @@
       }
     </style> 
   </head> 
-  <body class="text-center">
+  <body>
     <nav class="navbar navbar-light">
-      <a class="navbar-brand" href="#">
-        <img src="revelry-foundation.png" alt="Revelry Foundation" />
-      </a>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="revelry-foundation.png" alt="Revelry Foundation" />
+        </a>
+      </div>
     </nav>
     <section class="hero">
-      <img src="building-things-that-matter.jpg" class="img-fluid" alt="Building Things That Matter" />
-    </section>
-    <section class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>Initiatives</h2>
-        </div>
-        <div class="col-sm-4">
-          <h3>Nightingale Initiative</h3>
-          <p>We’re working with state health officials and local community leaders across Louisiana to help flatten the curve.</p>
-          <p><a href="https://nightingale.revelry.org" class="btn btn-primary">Learn More</a></p>
-        </div>            
-        <div class="col-sm-4">
-          <h3>The Gardere Initiative</h3>
-          <p>We’re partnering with the Gardere Initiative to offer high school students the opportunity to gain essential technology skills and experience.</p>
-          <p><a href="https://3ulsmb4eg8vz37c0vz2si64j-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/apprentice-program.pdf" class="btn btn-primary">Learn More</a></p>
-        </div>            
-        <div class="col-sm-4">
-          <h3>The Revelry Apprenticeship Initiative</h3>
-          <p>We’re working to empower the next generation of future developers, designers, and project managers.</p>
-          <p><a href="https://github.com/revelrylabs" class="btn btn-primary">Learn More</a></p>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-lg-8 px-lg-0 order-lg-12">
+            <img src="building-things-that-matter.jpg" class="img-fluid" alt="Building Things That Matter" />
+          </div>
+          <div class="col-sm-12 col-lg-4 px-lg-0 order-lg-1 hero-content">
+            <h1>Building Things that Matter</h1>
+            <p class="large">The Revelry Foundation works with non-profit and community leaders to help build things that matter.</p>
+          </div>
         </div>
       </div>
     </section>
     <section class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <h2>Building in The Open Source</h2>
-          <p>We believe that Open Collaboration, Open Data, and Open Source is the path to accelerate innovation.</p>
-          <p><a href="https://github.com/revelrylabs" class="btn btn-primary">Learn More</a></p>
+        <!-- <div class="col-sm-12">
+          <h2>Initiatives</h2>
+        </div> -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3>Nightingale Initiative</h3>
+                <p>We’re working with state health officials and local community leaders across Louisiana to help flatten the curve.</p>
+                <p><a href="https://nightingale.revelry.org" class="btn">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>            
+        <div class="col-md-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3>The Gardere Initiative</h3>
+                <p>We’re partnering with the Gardere Initiative to offer high school students the opportunity to gain essential technology skills and experience.</p>
+                <p><a href="https://3ulsmb4eg8vz37c0vz2si64j-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/apprentice-program.pdf" class="btn">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>           
+        <div class="col-md-4">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3>The Revelry Apprenticeship Initiative</h3>
+                <p>We’re working to empower the next generation of future developers, designers, and project managers.</p>
+                <p><a href="https://github.com/revelrylabs" class="btn">Learn More</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div> 
+      </div>
+    </section>
+    <section class="bkgd-lightest-gray text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-10 col-lg-9 col-xl-6">
+            <h2>Building in The Open Source</h2>
+            <p class="large">We believe that Open Collaboration, Open Data, and Open Source is the path to accelerate innovation.</p>
+            <p><a href="https://github.com/revelrylabs" class="btn">Learn More</a></p>
+          </div>
+        </div>
+      </div>
     </section>
     <footer id="footer">
       <div class="container">
